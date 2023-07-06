@@ -1,0 +1,22 @@
+$font-family: 'Roboto', sans-serif;
+$background_li: #f6f6f6;
+$buton_heart_gradient2: #9356DC;
+$button_heart_gradient: #FF79DA;
+$background_new: #99E2D0;
+$text_new: #008766;
+$position_button_bacground_footer: #353535;
+$background_position: #EAEAEA;
+$grey_icons: #7E7E7E;
+$store_icon: #9356DC;
+$footer-txt: white;
+
+body {
+	background-color: $background_li;
+	display: flex;
+	justify-content: center;
+}
+.main-container {
+	width: 100%;
+	max-width: 375px;
+	box-sizing: border-box;
+}

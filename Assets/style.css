@@ -1,0 +1,11 @@
+body {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-container {
+    width: 100%;
+    max-width: 375px;
+    box-sizing: border-box;
+  }
