@@ -1,11 +1,173 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .main-container {
-    width: 100%;
-    max-width: 375px;
-    box-sizing: border-box;
-  }
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 375px;
+  box-sizing: border-box;
+}
+
+header .logo {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 13px 0px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2px;
+}
+header p {
+  margin: 0px;
+  padding: 17px 0px;
+  text-align: center;
+  background-color: #EAEAEA;
+  color: #353535;
+}
+.fa-location-dot {
+  padding-right: 17px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.button h2 {
+  width: 275px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.button p {
+  width: 315px;
+  text-align: center;
+  margin-top: 0px;
+  color: #353535;
+  font-weight: 300;
+}
+.button button {
+  width: 218px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+button:hover {
+  background: linear-gradient(175deg, rgba(255, 121, 217, 0.8901960784) 0%, rgba(146, 86, 220, 0.8980392157) 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.fonctionnement {
+  padding: 40px 0px 25px 20px;
+  background-color: white;
+}
+.fonctionnement li {
+  width: 80%;
+  border-radius: 20px;
+  background: #f6f6f6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+  padding: 20px;
+}
+.fonctionnement i {
+  padding-right: 20px;
+}
+ol {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+.fa-solid {
+  color: #7E7E7E;
+}
+.fa-store {
+  color: #9356DC;
+}
+li span {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  right: 13%;
+  background-color: #9356DC;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  padding: 5px 10px;
+}
+
+.restaurants {
+  padding: 50px 15px;
+}
+
+.card {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.card a {
+  color: black;
+  text-decoration: none;
+}
+.img {
+  background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: 120%;
+  display: flex;
+  justify-content: flex-end;
+  height: 187.5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.img p {
+  margin-right: 10px;
+  border: 1px solid;
+  height: min-content;
+  background-color: #99E2D0;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 6px 9px;
+}
+
+.content {
+  display: flex;
+}
+
+.txt {
+  width: 80%;
+}
+.txt h3 {
+  font-size: 18px;
+  margin: 5px;
+}
+.txt p {
+  font-weight: 300;
+  margin: 5px;
+}
+
+.heart {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

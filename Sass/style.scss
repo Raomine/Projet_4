@@ -8,8 +8,29 @@ $position_button_bacground_footer: #353535;
 $background_position: #EAEAEA;
 $grey_icons: #7E7E7E;
 $store_icon: #9356DC;
-$footer-txt: white;
+$footer_txt: white;
+@mixin card-img {
+	background-size: 120%;
+    display: flex;
+    justify-content: end;
+    height: 187.5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+	p {
+		margin-right: 10px;
+		border: 1px solid;
+		height: min-content;
+		background-color: $background_new;
+		color: $text_new;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		border-radius: 2px;
+		padding: 6px 9px;
+	}
+}
 
+* {
+	font-family: $font-family;
+}
 body {
 	background-color: $background_li;
 	display: flex;
@@ -19,4 +40,147 @@ body {
 	width: 100%;
 	max-width: 375px;
 	box-sizing: border-box;
+}
+
+header {
+	.logo {
+		width: 100%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		padding: 13px 0px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		margin-bottom: 2px;
+	}
+	p {
+		margin: 0px;
+		padding: 17px 0px;
+		text-align: center;
+		background-color: $background_position;
+		color: $position_button_bacground_footer;
+	}
+}
+.fa-location-dot {
+	padding-right: 17px;
+}
+.button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
+	h2 {
+		width: 275px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	p {
+		width: 315px;
+		text-align: center;
+		margin-top: 0px;
+		color: $position_button_bacground_footer;
+		font-weight: 300;
+	}
+	button {
+		width: 218px;
+		height: 50px;
+		border: none;
+		border-radius: 25px;
+		background: linear-gradient(175deg, $button_heart_gradient 0%, $buton_heart_gradient2 100%);
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+		cursor: pointer;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+		font-size: 16px;
+	}
+}
+button {
+	&:hover {
+		background: linear-gradient(175deg, #ff79d9e3 0%, #9256dce5 100%);
+		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.fonctionnement {
+	padding: 40px 0px 25px 20px;
+	background-color: white;
+	li {
+		width: 80%;
+		border-radius: 20px;
+		background: $background_li;
+		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+		margin-bottom: 25px;
+		padding: 20px;
+	}
+	i {
+		padding-right: 20px;
+	}
+}
+ol {
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none;
+}
+.fa-solid {
+	color: $grey_icons;
+}
+.fa-store {
+	color: $store_icon;
+}
+li {
+	span {
+		width: 24px;
+		height: 24px;
+		position: relative;
+		right: 13%;
+		background-color: $store_icon;
+		border-radius: 24px;
+		text-align: center;
+		color: white;
+		padding: 5px 10px;
+	}
+}
+
+.restaurants {
+	padding: 50px 15px;
+}
+.card {
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+	margin-bottom: 20px;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+}
+.img {
+	background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+	@include card-img;
+}
+.content {
+	display: flex;
+}
+.txt {
+	width: 80%;
+	h3 {
+		font-size: 18px;
+		margin: 5px;
+	}
+	p {
+		font-weight: 300;
+		margin: 5px;
+	}
+}
+.heart {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
