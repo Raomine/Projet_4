@@ -98,6 +98,7 @@ header {
 		background: linear-gradient(175deg, $button_heart_gradient 0%, $buton_heart_gradient2 100%);
 		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 		cursor: pointer;
+		transition: opacity 400ms, box-shadow 400ms;
 	}
 	a {
 		text-decoration: none;
@@ -107,8 +108,8 @@ header {
 }
 button {
 	&:hover {
-		background: linear-gradient(175deg, #ff79d9e3 0%, #9256dce5 100%);
-		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+		opacity: 0.8;
+		box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
 	}
 }
 
@@ -171,18 +172,24 @@ li {
 }
 .img {
 	background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+	background-position-y: -50px;
+ 	background-position-x: -50px;
 	@include card-img-p;
 }
 .imgtwo {
 	background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
+	background-position-y: -200px;
+  	background-position-x: -50px;
 	@include card-img-p;
 }
 .imgthree {
 	background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+	background-position-y: -75px;
 	@include card-img;
 }
 .imgfour {
 	background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+	background-position-y: -75px;
 	@include card-img;
 }
 .content {
@@ -235,4 +242,95 @@ footer {
 }
 .fa-handshake-angle {
 	padding-right: 5px;
+}
+
+@media (min-width: 1440px) {
+	.main-container {
+		width: 100%;
+		max-width: 1440px;
+		box-sizing: border-box;
+	}
+	ol {
+		padding: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		gap: 25px;
+	}
+	.fonctionnement {
+		li {
+			width: 300px;
+			border-radius: 20px;
+			background: #f6f6f6;
+			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+			margin-bottom: 25px;
+			padding: 20px;
+		}
+	}
+	li {
+		span {
+			width: 24px;
+			height: 24px;
+			position: relative;
+			right: 10%;
+			background-color: $store_icon;
+			border-radius: 24px;
+			text-align: center;
+			color: white;
+			padding: 5px 10px;
+		}
+	}
+	.restaurants {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h2 {
+			margin-left: 180px;
+		}
+	}
+	.restaurants-cards {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 50px;
+	}
+	.card {
+		width: 500px;
+		margin-bottom: 0px;
+	}
+	.img {
+		background-position-y: -150px;
+		background-position-x: -50px;
+	}
+	.imgtwo {
+		background-position-y: -300px;
+		background-position-x: -50px;
+	}
+	.imgthree {
+		background-position-y: -150px;
+	}
+	.imgfour {
+		background-position-y: -150px;
+	}
+	footer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		align-items: flex-end;
+		gap: 20px;
+		padding-bottom: 15px;
+		padding-top: 35px;
+		h2 {
+			margin-bottom: 0px;
+		}
+	}
+	ul {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 0px;
+		gap: 10px;
+	}
 }
