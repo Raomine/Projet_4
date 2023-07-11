@@ -1,0 +1,208 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 375px;
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 220px;
+    background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: 110%;
+    }
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+}
+
+nav {
+    padding-right: 70px;
+}
+nav .fa-solid {
+    font-size: larger;
+    color: #353535;
+}
+
+.card {
+    padding: 10px;
+    background-color: #f6f6f6;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+    font-family: "Shrikhand";
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 16px;
+}
+h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    padding-top: 3px;
+    border-bottom: 3px solid #99E2D0;
+}
+
+.card-txt {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.card-txt p {
+    margin: 0px;
+}
+
+.pone {
+    font-size: 18px;
+}
+
+.card-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ptwo {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #353535;
+}
+
+.button {
+    display: flex; 
+}
+
+button {
+    margin: 40px auto;
+    width: 218px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 16px;
+}
+button:hover {
+    background: linear-gradient(175deg, #ff79d9e3 0%, #9256dce5 100%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    background-color: #353535;
+    padding: 25px;
+}
+footer h2 {
+    font-family: "Shrikhand";
+    color: white;
+}
+footer ul {
+    list-style: none;
+    padding-left: 0px;
+    color: white;
+}
+footer .fa-solid {
+    color: white;
+}
+footer li {
+    padding-bottom: 5px;
+}
+
+.fa-utensils {
+    padding-right: 12px;
+}
+
+.fa-handshake-angle {
+    padding-right: 5px;
+}
+
+@media (min-width: 1440px) {
+    .main-container {
+      width: 100%;
+      max-width: 1440px;
+      box-sizing: border-box;
+    }
+
+    header {
+        justify-content: flex-start;
+        gap: 500px;
+    }
+
+    main {
+        padding-top: 420px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: -260px;
+        background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplashR.jpg);
+    }
+
+    .card {
+        margin: 0px 200px;
+    }
+
+    .card-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .card-title {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    h3 {
+        width: 75%;
+    }
+
+    .card-txt {
+        width: 75%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 20px;
+        padding-bottom: 15px;
+        padding-top: 35px;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0px;
+        gap: 10px;
+    }
+        footer h2 {
+        margin-bottom: 0px;
+    }
+}
