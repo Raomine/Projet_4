@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="Assets/style.css">
     <title>OhMyFood</title>
 </head>
+
 <body>
     <div class="main-container">
         <header>
             <div class="logo">
                 <img src="Assets/Images/ohmyfood@2x.svg" alt="Logo ohmyfood">
             </div>
-                <p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
+            <p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
         </header>
         <section class="button">
             <h2>Réservez le menu qui vous convient</h2>
@@ -34,13 +37,13 @@
                     <li><span>3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                 </ol>
             </section>
-            <section class="restaurants" >
+            <section class="restaurants">
                 <h2 id="Restaurants">Restaurants</h2>
                 <div class="restaurants-cards">
                     <article class="card">
                         <a href="Restaurants/lapalettedugout.html">
-                            <div class="img"> 
-                            <p class="new">Nouveau</p> 
+                            <div class="img">
+                                <p class="new">Nouveau</p>
                             </div>
                             <div class="content">
                                 <div class="txt">
@@ -48,15 +51,16 @@
                                     <p>Ménilmontant</p>
                                 </div>
                                 <div class="heart">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <input type="checkbox" id="like">
+                                    <label for="like" class="fa-solid fa-heart"></label> 
                                 </div>
                             </div>
                         </a>
                     </article>
                     <article class="card">
                         <a href="Restaurants/lanoteenchantee.html">
-                            <div class="imgtwo"> 
-                            <p class="new">Nouveau</p> 
+                            <div class="imgtwo">
+                                <p class="new">Nouveau</p>
                             </div>
                             <div class="content">
                                 <div class="txt">
@@ -64,7 +68,8 @@
                                     <p>Charonne</p>
                                 </div>
                                 <div class="heart">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <input type="checkbox" id="liketwo">
+                                    <label for="liketwo" class="fa-solid fa-heart"></label> 
                                 </div>
                             </div>
                         </a>
@@ -79,7 +84,8 @@
                                     <p>Cité Rouge</p>
                                 </div>
                                 <div class="heart">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <input type="checkbox" id="likethree">
+                                    <label for="likethree" class="fa-solid fa-heart"></label> 
                                 </div>
                             </div>
                         </a>
@@ -94,12 +100,13 @@
                                     <p>Folie-Méricourt</p>
                                 </div>
                                 <div class="heart">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <input type="checkbox" id="likefour">
+                                    <label for="likefour" class="fa-solid fa-heart"></label> 
                                 </div>
                             </div>
                         </a>
                     </article>
-                </div> 
+                </div>
             </section>
             <footer>
                 <h2>ohmyfood</h2>
@@ -109,9 +116,10 @@
                     <li>Mentions légales</li>
                     <li><a href="mailto:email@exemple.com">Contact</a></li>
                 </ul>
-            </footer>           
+            </footer>
         </main>
-        
+
     </div>
 </body>
+
 </html>
