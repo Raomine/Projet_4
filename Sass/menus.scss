@@ -21,10 +21,27 @@ body {
 	max-width: 375px;
 	box-sizing: border-box;
 }
-main {
+.img {
 	padding-top: 220px;
 	background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 	background-size: 110%;
+}
+.imgtwo {
+    background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
+    padding-top: 220px;
+    background-size: 110%;
+    background-position-y: -100px;
+}
+.imgthree {
+    background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    padding-top: 220px;
+    background-size: 110%;
+}   
+.imgfour {
+    background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    padding-top: 220px;
+    background-size: 110%;
+	background-position-y: -50px;
 }
 header {
 	background-color: white;
@@ -124,6 +141,10 @@ footer {
 	}
 	li {
 		padding-bottom: 5px;
+		a {
+			text-decoration: none;
+			color: $footer_txt
+		}
 	}
 }
 .fa-utensils {
@@ -143,13 +164,34 @@ footer {
 		justify-content: flex-start;
 		gap: 500px;
 	}
-	main {
+	.img {
 		padding-top: 420px;
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-position-y: -260px;
 		background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplashR.jpg);
 	}
+	.imgtwo {
+        background-image: url(Images/stil-u2Lp8tXIcjw-unsplashR.jpg);
+        padding-top: 420px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: -770px;
+    }
+	.imgthree {
+        padding-top: 420px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-y: -370px;
+        background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplashR.jpg);
+    }
+	.imgfour {
+        padding-top: 420px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-y: -370px;
+        background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplashR.jpg);
+    }
 	.card {
 		margin: 0px 200px;
 	}
