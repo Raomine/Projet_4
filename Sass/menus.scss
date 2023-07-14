@@ -77,9 +77,35 @@ nav {
 .card-title {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin: 20px 10px;
-	font-family: $font-family_title;
+
+	h2 {
+		font-family: "Shrikhand";
+	}
 }
+
+.fa-heart {
+	font-size: 22px;
+	color: black;
+	transition: color 0.3s;
+}
+
+input {
+	display: none;
+
+	&:checked {
+		+ {
+			.fa-heart {
+				background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}
+
 
 h3 {
 	font-weight: 300;
