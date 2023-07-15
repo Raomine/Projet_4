@@ -98,8 +98,8 @@ input {
 		+ {
 			.fa-heart {
 				background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-				background-clip: text;
 				-webkit-background-clip: text;
+				background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
 		}
@@ -211,6 +211,10 @@ footer {
 }
 
 @media (min-width: 1440px) {
+	body {
+		background-color: white;
+	  }
+
 	.main-container {
 		width: 100%;
 		max-width: 1440px;

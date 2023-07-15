@@ -76,6 +76,7 @@ nav .fa-solid {
     font-family: "Shrikhand";
 }
 
+
 .fa-heart {
     font-size: 22px;
     color: black;
@@ -88,8 +89,8 @@ input {
 
 input:checked+.fa-heart {
     background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -106,18 +107,74 @@ h3::after {
     border-bottom: 3px solid #99E2D0;
 }
 
-.card-txt {
+.card-txtone {
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin-bottom: 10px;
+    transform: translateY(9999px);
+    animation: apparitionone 1s 1s forwards;
+}
+.card-txttwo {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    transform: translateY(9999px);
+    animation: apparitiontwo 1s 1.5s forwards;
+}
+.card-txtthree {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    transform: translateY(9999px);
+    animation: apparitionthree 1s 2s forwards;
 }
 
-.card-txt p {
+
+@keyframes apparitionone {
+    from {
+        transform: translateY(9999px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes apparitiontwo {
+    from {
+        transform: translateY(9999px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes apparitionthree {
+    from {
+        transform: translateY(9999px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+.card-txtone p {
     margin: 0px;
 }
-
+.card-txttwo p {
+    margin: 0px;
+}
+.card-txtthree p {
+    margin: 0px;
+}
 .pone {
     font-size: 18px;
 }
@@ -197,6 +254,10 @@ footer li a {
 }
 
 @media (min-width: 1440px) {
+    body {
+        background-color: white;
+    }
+
     .main-container {
         width: 100%;
         max-width: 1440px;
@@ -261,10 +322,15 @@ footer li a {
         width: 75%;
     }
 
-    .card-txt {
+    .card-txtone {
         width: 75%;
     }
-
+    .card-txttwo {
+        width: 75%;
+    }
+    .card-txtthree {
+        width: 75%;
+    }
     footer {
         display: flex;
         flex-direction: row-reverse;
