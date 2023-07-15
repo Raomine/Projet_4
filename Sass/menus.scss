@@ -91,21 +91,22 @@ nav {
 	transition: color 0.3s;
 }
 
-input {
-	display: none;
+.heart {
+	input {
+		display: none;
 
-	&:checked {
-		+ {
-			.fa-heart {
-				background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-				-webkit-background-clip: text;
-				background-clip: text;
-				-webkit-text-fill-color: transparent;
+		&:checked {
+			+ {
+				.fa-heart {
+					background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
 			}
 		}
 	}
 }
-
 
 h3 {
 	font-weight: 300;
@@ -126,10 +127,117 @@ h3 {
 	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 	padding: 15px;
 	margin-bottom: 10px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
 
 	p {
 		margin: 0px;
 	}
+}
+
+.choice {
+	display: flex;
+
+	input {
+		display: block;
+		opacity: 0;
+		width: 355px;
+		transition: transform 0.5s linear;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+
+		&:checked {
+			+ {
+				.fa-circle-check {
+					transform: translateX(0px);
+				}
+			}
+		}
+	}
+}
+
+.fa-circle-check {
+	display: block;
+	padding: 15px;
+	background-color: #99E2D0;
+	font-size: 40px;
+	color: white;
+	transform: translateX(9999px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 285px;
+	z-index: 2;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.card-txtone {
+	transform: translateY(9999px);
+	animation: apparitionone 1s 1s forwards;
+}
+
+.card-txttwo {
+
+	transform: translateY(9999px);
+	animation: apparitiontwo 1s 1.5s forwards;
+}
+
+.card-txtthree {
+
+	transform: translateY(9999px);
+	animation: apparitionthree 1s 2s forwards;
+}
+
+
+@keyframes apparitionone {
+	from {
+		transform: translateY(9999px);
+	}
+
+	to {
+		transform: translateY(0px);
+	}
+}
+
+
+@keyframes apparitiontwo {
+	from {
+		transform: translateY(9999px);
+	}
+
+	to {
+		transform: translateY(0px);
+	}
+}
+
+
+@keyframes apparitionthree {
+	from {
+		transform: translateY(9999px);
+	}
+
+	to {
+		transform: translateY(0px);
+	}
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	justify-content: space-around;
+	width: 75%;
+}
+
+.card-txt p {
+	margin: 0px;
 }
 
 .pone {
@@ -213,7 +321,7 @@ footer {
 @media (min-width: 1440px) {
 	body {
 		background-color: white;
-	  }
+	}
 
 	.main-container {
 		width: 100%;
@@ -282,6 +390,19 @@ footer {
 	.card-txt {
 		width: 75%;
 	}
+
+	.text {
+		width: 85%;
+	}
+
+	.fa-circle-check {
+		left: 685px;
+	}
+
+	input#valid {
+		width: 765px;
+	}
+
 
 	footer {
 		display: flex;
