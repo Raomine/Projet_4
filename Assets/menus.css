@@ -50,12 +50,16 @@ header {
 }
 
 nav {
-  padding-right: 70px;
+  width: 20%;
 }
 
 nav .fa-solid {
   font-size: larger;
   color: #353535;
+}
+
+img {
+  width: 60%;
 }
 
 .card {
@@ -97,7 +101,7 @@ nav .fa-solid {
   display: none;
 }
 
-.heart input:checked + .fa-solid {
+.heart input:checked+.fa-solid {
   opacity: 1;
 }
 
@@ -132,7 +136,7 @@ h3::after {
 .choice input {
   display: block;
   opacity: 0;
-  width: 355px;
+  width: 95%;
   transition: transform 0.5s linear;
   position: absolute;
   top: 0;
@@ -158,7 +162,7 @@ h3::after {
   border-bottom-right-radius: 15px;
 }
 
-.choice input:checked + .fa-circle-check {
+.choice input:checked+.fa-circle-check {
   transform: translateX(0px);
   display: block;
 }

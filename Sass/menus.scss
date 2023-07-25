@@ -59,12 +59,16 @@ header {
 }
 
 nav {
-	padding-right: 70px;
+	width: 20%;
 
 	.fa-solid {
 		font-size: larger;
 		color: $position_button_bacground_footer;
 	}
+}
+
+img {
+	width: 60%;
 }
 
 .card {
@@ -97,8 +101,10 @@ nav {
 		opacity: 0;
 		transition: opacity 0.3s;
 	}
+
 	input {
 		display: none;
+
 		&:checked {
 			+ {
 				.fa-solid {
@@ -108,6 +114,7 @@ nav {
 		}
 	}
 }
+
 .fa-regular {
 	font-size: 22px;
 	color: #353535;
@@ -148,7 +155,7 @@ h3 {
 	input {
 		display: block;
 		opacity: 0;
-		width: 355px;
+		width: 95%;
 		transition: transform 0.5s linear;
 		position: absolute;
 		top: 0;
