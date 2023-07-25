@@ -12,7 +12,7 @@ $store_icon: #9356DC;
 $footer_txt: white;
 
 @mixin card-img-p {
-	background-size: 120%;
+	background-size: 400px;
 	display: flex;
 	justify-content: end;
 	height: 187.5px;
@@ -32,7 +32,7 @@ $footer_txt: white;
 }
 
 @mixin card-img {
-	background-size: 120%;
+	background-size: 400px;
 	display: flex;
 	justify-content: end;
 	height: 187.5px;
@@ -51,24 +51,20 @@ body {
 }
 
 .loader {
-	display: flex;
+	display: block;
 	width: 100%;
+	max-width: 375px;
 	height: 2500px;
 	position: absolute;
-	top: 0;
-	bottom: 0%;
-	left: 0;
-	right: 0%;
-	z-index: 1;
 	background-color: #f6f6f6;
 	animation: loader 2.5s forwards;
 }
 
 .anim-loader {
 	margin: 300px auto;
-	width: 300px;
-	height: 300px;
-	border: 20px solid #9356DC;
+	width: 50%;
+	height: 7.5%;
+	border: 20px solid #9356dc;
 	border-bottom: 40px ridge;
 	border-bottom-color: #99e2d0;
 	border-radius: 50%;
@@ -77,6 +73,11 @@ body {
 
 @keyframes loader {
 	0% {
+		z-index: 1;
+		opacity: 1;
+	}
+
+	99% {
 		z-index: 1;
 		opacity: 1;
 	}
@@ -110,7 +111,7 @@ header {
 		display: flex;
 		justify-content: center;
 		padding: 13px 0px;
-		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.15);
 		margin-bottom: 2px;
 	}
 
@@ -135,13 +136,13 @@ header {
 	padding-bottom: 50px;
 
 	h2 {
-		width: 275px;
+		width: 80%;
 		text-align: center;
 		margin-bottom: 10px;
 	}
 
 	p {
-		width: 315px;
+		width: 90%;
 		text-align: center;
 		margin-top: 0px;
 		color: $position_button_bacground_footer;
@@ -149,7 +150,7 @@ header {
 	}
 
 	button {
-		width: 218px;
+		width: 60%;
 		height: 50px;
 		border: none;
 		border-radius: 25px;
@@ -209,11 +210,9 @@ ol {
 
 li {
 	span {
-		width: 24px;
-		height: 24px;
 		position: relative;
-		right: 13%;
-		background-color: $store_icon;
+		right: 35px;
+		background-color: #9356dc;
 		border-radius: 24px;
 		text-align: center;
 		color: white;
@@ -275,6 +274,7 @@ li {
 	h3 {
 		font-size: 18px;
 		margin: 5px;
+		max-height: 35px;
 	}
 
 	p {
@@ -359,7 +359,13 @@ footer {
 
 @media (min-width: 1440px) {
 	.loader {
+		max-width: 1440px;
 		height: 1420px;
+	}
+
+	.anim-loader {
+		width: 300px;
+		height: 300px;
 	}
 
 	.main-container {
@@ -378,6 +384,10 @@ footer {
 		p {
 			width: 100%;
 			margin-bottom: 30px;
+		}
+
+		button {
+			width: 218px;
 		}
 	}
 
@@ -446,20 +456,24 @@ footer {
 	}
 
 	.img {
+		background-size: 600px;
 		background-position-y: -150px;
 		background-position-x: -50px;
 	}
 
 	.imgtwo {
+		background-size: 550px;
 		background-position-y: -300px;
 		background-position-x: -50px;
 	}
 
 	.imgthree {
+		background-size: 550px;
 		background-position-y: -150px;
 	}
 
 	.imgfour {
+		background-size: 550px;
 		background-position-y: -150px;
 	}
 
