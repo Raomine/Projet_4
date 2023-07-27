@@ -137,37 +137,28 @@ h3 {
 .card-txt {
 	border-radius: 15px;
 	background-color: white;
-	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-	padding: 15px;
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 	margin-bottom: 10px;
 	position: relative;
-	display: flex;
-	justify-content: space-between;
-
-	p {
-		margin: 0px;
-	}
 }
 
 .choice {
 	display: flex;
 
-	input {
+	input[value="select"] {
 		display: block;
 		opacity: 0;
-		width: 95%;
-		transition: transform 0.5s linear;
+		width: 100%;
 		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		z-index: 2;
+		z-index: 1;
 
 		&:checked {
 			+ {
 				.fa-circle-check {
-					transform: translateX(0px);
 					display: block;
 				}
 			}
@@ -178,16 +169,13 @@ h3 {
 .fa-circle-check {
 	display: none;
 	padding: 15px;
-	background-color: #99E2D0;
+	background-color: #99e2d0;
 	font-size: 40px;
 	color: white;
-	transform: translateX(9999px);
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	left: 285px;
-	z-index: 2;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
@@ -332,7 +320,7 @@ footer {
 	padding-right: 5px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
 	body {
 		background-color: white;
 	}
@@ -345,13 +333,20 @@ footer {
 
 	header {
 		justify-content: flex-start;
-		gap: 500px;
+	}
+
+	nav {
+		width: 44%;
+	}
+
+	img {
+		width: auto;
 	}
 
 	.img {
 		padding-top: 420px;
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 45%;
 		background-position-y: -260px;
 		background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplashR.jpg);
 	}
@@ -360,13 +355,13 @@ footer {
 		background-image: url(Images/stil-u2Lp8tXIcjw-unsplashR.jpg);
 		padding-top: 420px;
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 74%;
 		background-position-y: -770px;
 	}
 
 	.imgthree {
 		padding-top: 420px;
-		background-size: 100%;
+		background-size: 100% 52%;
 		background-repeat: no-repeat;
 		background-position-y: -370px;
 		background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplashR.jpg);
@@ -374,7 +369,7 @@ footer {
 
 	.imgfour {
 		padding-top: 420px;
-		background-size: 100%;
+		background-size: 100% 52%;
 		background-repeat: no-repeat;
 		background-position-y: -370px;
 		background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplashR.jpg);
@@ -406,17 +401,110 @@ footer {
 	}
 
 	.text {
-		width: 85%;
+		width: 80%;
 	}
 
-	.fa-circle-check {
-		left: 685px;
+	footer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		align-items: flex-end;
+		gap: 20px;
+		padding-bottom: 15px;
+		padding-top: 35px;
+
+		h2 {
+			margin-bottom: 0px;
+		}
 	}
 
-	input#valid {
-		width: 765px;
+	ul {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 0px;
+		gap: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	body {
+		background-color: white;
 	}
 
+	.main-container {
+		width: 100%;
+		max-width: 768px;
+		box-sizing: border-box;
+	}
+
+	header {
+		justify-content: flex-start;
+	}
+
+	nav {
+		width: 44%;
+	}
+
+	img {
+		width: auto;
+	}
+
+	.img {
+		padding-top: 420px;
+		background-repeat: no-repeat;
+		background-size: 100% 45%;
+		background-position-y: -260px;
+		background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplashR.jpg);
+	}
+
+	.imgtwo {
+		background-image: url(Images/stil-u2Lp8tXIcjw-unsplashR.jpg);
+		padding-top: 420px;
+		background-repeat: no-repeat;
+		background-size: 100% 74%;
+		background-position-y: -770px;
+	}
+
+	.imgthree {
+		padding-top: 420px;
+		background-size: 100% 52%;
+		background-repeat: no-repeat;
+		background-position-y: -370px;
+		background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplashR.jpg);
+	}
+
+	.imgfour {
+		padding-top: 420px;
+		background-size: 100% 52%;
+		background-repeat: no-repeat;
+		background-position-y: -370px;
+		background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplashR.jpg);
+	}
+
+	.card {
+		margin: 0px 100px;
+	}
+
+	.card-content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.card-title {
+		justify-content: center;
+		gap: 30px;
+	}
+
+	h3 {
+		width: 75%;
+	}
+
+	.card-txt {
+		width: 75%;
+	}
 
 	footer {
 		display: flex;
