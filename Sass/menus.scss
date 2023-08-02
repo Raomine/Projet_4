@@ -182,45 +182,20 @@ h3 {
 
 .card-txtone {
 	transform: translateY(9999px);
-	animation: apparitionone 1s 1s forwards;
+	animation: apparition 1s 1s forwards;
 }
 
 .card-txttwo {
-
 	transform: translateY(9999px);
-	animation: apparitiontwo 1s 1.5s forwards;
+	animation: apparition 1s 2s forwards;
 }
 
 .card-txtthree {
-
 	transform: translateY(9999px);
-	animation: apparitionthree 1s 2s forwards;
+	animation: apparition 1s 3s forwards;
 }
 
-
-@keyframes apparitionone {
-	from {
-		transform: translateY(9999px);
-	}
-
-	to {
-		transform: translateY(0px);
-	}
-}
-
-
-@keyframes apparitiontwo {
-	from {
-		transform: translateY(9999px);
-	}
-
-	to {
-		transform: translateY(0px);
-	}
-}
-
-
-@keyframes apparitionthree {
+@keyframes apparition {
 	from {
 		transform: translateY(9999px);
 	}
@@ -235,7 +210,6 @@ h3 {
 	flex-direction: column;
 	padding: 15px;
 	justify-content: space-around;
-	width: 75%;
 }
 
 .card-txt p {
