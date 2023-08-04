@@ -7,39 +7,42 @@ body {
   display: flex;
   justify-content: center;
   margin: 0px;
+  animation: scroll 2.5s;
+}
+
+@keyframes scroll {
+
+  0%,
+  100% {
+    overflow: hidden;
+  }
+
 }
 
 .loader {
   display: block;
   width: 100%;
-  max-width: 375px;
-  height: 2500px;
+  height: 100%;
   position: absolute;
   background-color: #f6f6f6;
-  animation: loader 2.5s forwards;
+  z-index: -1;
+  opacity: 0;
+  animation: loader 2.5s;
 }
 
 @keyframes loader {
-  0% {
-    z-index: 1;
-    opacity: 1;
-  }
 
-  99% {
-    z-index: 1;
-    opacity: 1;
-  }
-
+  0%,
   100% {
-    z-index: -1;
-    opacity: 0;
+    z-index: 1;
+    opacity: 1;
   }
 }
 
 .anim-loader {
-  margin: 300px auto;
-  width: 50%;
-  height: 7.5%;
+  margin: 50% auto;
+  width: 200px;
+  height: 200px;
   border: 20px solid #9356dc;
   border-bottom: 40px ridge;
   border-bottom-color: #99e2d0;
@@ -59,7 +62,6 @@ body {
 
 .main-container {
   width: 100%;
-  max-width: 375px;
   box-sizing: border-box;
 }
 
@@ -130,28 +132,34 @@ button:hover {
 }
 
 .fonctionnement {
-  padding: 40px 0px 25px 20px;
+  display: flex;
   background-color: white;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 20px 50px 0px;
 }
 
 .fonctionnement li {
-  width: 80%;
   border-radius: 20px;
   background: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
-  padding: 20px;
+  padding: 25px 20px;
 }
 
 .fonctionnement i {
   padding-right: 20px;
 }
 
+.fonctionnement h2 {
+  width: 90%;
+  padding-left: 15px;
+}
+
 ol {
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 90%;
+  padding-left: 30px;
   list-style: none;
 }
 
@@ -174,7 +182,19 @@ li span {
 }
 
 .restaurants {
-  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+}
+
+.restaurants h2 {
+  width: 90%;
+}
+
+.restaurants-cards {
+  width: 90%;
 }
 
 .card {
@@ -193,8 +213,7 @@ li span {
 
 .img {
   background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-size: 400px;
-  background-position-y: -50px;
+  background-size: 120% 130%;
   background-position-x: -50px;
   display: flex;
   justify-content: flex-end;
@@ -216,8 +235,8 @@ li span {
 
 .imgtwo {
   background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background-size: 400px;
-  background-position-y: -200px;
+  background-size: 130% 200%;
+  background-position-y: -100px;
   background-position-x: -50px;
   display: flex;
   justify-content: end;
@@ -239,8 +258,9 @@ li span {
 
 .imgthree {
   background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  background-size: 400px;
+  background-size: 130% 150%;
   background-position-y: -75px;
+  background-position-x: -50px;
   display: flex;
   justify-content: end;
   height: 187.5px;
@@ -250,8 +270,9 @@ li span {
 
 .imgfour {
   background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  background-size: 400px;
+  background-size: 130% 150%;
   background-position-y: -75px;
+  background-position-x: -50px;
   display: flex;
   justify-content: end;
   height: 187.5px;
@@ -318,19 +339,23 @@ li span {
 
 footer {
   background-color: #353535;
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
 footer h2 {
   font-family: "Shrikhand";
   color: white;
-  margin-top: 0px;
+  width: 90%;
 }
 
 footer ul {
   list-style: none;
   padding-left: 0px;
   color: white;
+  width: 90%;
 }
 
 footer .fa-solid {
@@ -355,20 +380,11 @@ footer li a {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .loader {
-    max-width: 768px;
-    height: 1420px;
-  }
 
   .anim-loader {
     width: 300px;
     height: 300px;
-  }
-
-  .main-container {
-    width: 100%;
-    max-width: 768px;
-    box-sizing: border-box;
+    margin: 30% auto;
   }
 
   .button h2 {
@@ -387,48 +403,29 @@ footer li a {
   }
 
   .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
+    padding: 50px 0px;
   }
 
-
+  .fonctionnement h2 {
+    text-align: center;
+  }
 
   ol {
-    padding: 0px;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     list-style: none;
     gap: 25px;
   }
 
   .fonctionnement li {
-    width: 280px;
-    border-radius: 20px;
-    background: #f6f6f6;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    margin-bottom: 25px;
-    padding: 20px;
+    width: 480px;
+    padding: 25px 40px;
   }
 
-  li span {
-    width: 24px;
-    height: 24px;
-    position: relative;
-    right: 11%;
-    background-color: #9356dc;
-    border-radius: 24px;
+  .restaurants h2 {
     text-align: center;
-    color: white;
-    padding: 5px 10px;
-  }
-
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
   }
 
   .restaurants-cards {
@@ -467,43 +464,39 @@ footer li a {
   }
 
   footer {
-    display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 50px;
     padding-bottom: 15px;
     padding-top: 35px;
   }
 
-  ul {
-    display: flex;
+  footer ul {
     flex-direction: row;
     margin-bottom: 0px;
     gap: 10px;
+    width: 550px;
+  }
+
+  footer li {
+    padding: 0px 20px;
+    text-align: right;
   }
 
   footer h2 {
     margin-bottom: 0px;
+    width: auto;
   }
 
 }
 
 @media (min-width: 1024px) {
-  .loader {
-    max-width: 1440px;
-    height: 1420px;
-  }
 
   .anim-loader {
     width: 300px;
     height: 300px;
-  }
-
-  .main-container {
-    width: 100%;
-    max-width: 1440px;
-    box-sizing: border-box;
+    margin: 20% auto;
   }
 
   .button h2 {
@@ -522,101 +515,88 @@ footer li a {
   }
 
   .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .fonctionnement h2 {
+    width: 80%;
+    padding-left: 0px;
   }
 
   ol {
     padding: 0px;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    list-style: none;
-    gap: 25px;
+    gap: 35px;
   }
 
   .fonctionnement li {
-    width: 280px;
-    border-radius: 20px;
-    background: #f6f6f6;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    margin-bottom: 25px;
-    padding: 20px;
+    width: 100%;
   }
 
-  li span {
-    width: 24px;
-    height: 24px;
-    position: relative;
-    right: 11%;
-    background-color: #9356dc;
-    border-radius: 24px;
-    text-align: center;
-    color: white;
-    padding: 5px 10px;
-  }
-
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
+  .restaurants h2 {
+    width: 80%;
   }
 
   .restaurants-cards {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 50px 10%;
+    width: 80%;
+    justify-content: flex-start;
   }
 
   .card {
-    width: 490px;
-    margin-bottom: 0px;
+    width: 45%;
+    padding-bottom: 15px;
   }
 
   .img {
-    background-size: 600px;
-    background-position-y: -150px;
-    background-position-x: -50px;
+    background-size: 120% 400px;
+    background-position: center;
   }
 
   .imgtwo {
-    background-size: 550px;
-    background-position-y: -300px;
-    background-position-x: -50px;
+    background-size: 120% 400px;
+    background-position: center -130px;
   }
 
   .imgthree {
-    background-size: 550px;
-    background-position-y: -150px;
+    background-size: 120% 400px;
+    background-position: center -160px;
   }
 
   .imgfour {
-    background-size: 550px;
-    background-position-y: -150px;
+    background-size: 120% 300px;
+    background-position: center -100px;
+  }
+
+  .content {
+    padding: 10px;
   }
 
   footer {
-    display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    align-content: flex-end;
     align-items: flex-end;
+    flex-wrap: nowrap;
     gap: 20px;
-    padding-bottom: 15px;
-    padding-top: 35px;
+    padding: 30px 25px;
   }
 
-  ul {
+  footer ul {
     display: flex;
     flex-direction: row;
     margin-bottom: 0px;
     gap: 10px;
+    width: auto;
   }
 
   footer h2 {
     margin-bottom: 0px;
+    width: auto;
   }
+
 }

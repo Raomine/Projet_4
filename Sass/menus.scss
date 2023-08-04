@@ -13,41 +13,40 @@ $footer_txt: white;
 
 body {
 	background-color: $background_li;
-	display: flex;
-	justify-content: center;
 	margin: 0px;
 }
 
 .main-container {
 	width: 100%;
-	max-width: 375px;
 	box-sizing: border-box;
 }
 
 .img {
 	padding-top: 220px;
 	background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-	background-size: 110%;
+	background-size: 100% 500px;
+	background-position: center -150px;
 }
 
 .imgtwo {
 	background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
 	padding-top: 220px;
-	background-size: 110%;
-	background-position-y: -100px;
+	background-size: 100% 500px;
+	background-position: center -150px;
 }
 
 .imgthree {
-	background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+	background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
 	padding-top: 220px;
-	background-size: 110%;
+	background-size: 100% 500px;
+	background-position: center -150px;
 }
 
 .imgfour {
-	background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+	background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
 	padding-top: 220px;
-	background-size: 110%;
-	background-position-y: -50px;
+	background-size: 100% 500px;
+	background-position: center -150px;
 }
 
 header {
@@ -59,26 +58,31 @@ header {
 }
 
 nav {
-	width: 20%;
-
 	.fa-solid {
 		font-size: larger;
 		color: $position_button_bacground_footer;
 	}
 }
 
-img {
-	width: 60%;
+header {
+	img {
+		display: block;
+		margin: auto;
+	}
 }
 
-.card {
-	padding: 10px;
-	background-color: $background_li;
+.card-content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	background-color: #f6f6f6;
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
 }
 
 .card-title {
+	width: 90%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -135,11 +139,13 @@ h3 {
 }
 
 .card-txt {
+	width: 90%;
 	border-radius: 15px;
 	background-color: white;
 	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 	margin-bottom: 10px;
-	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 
 .choice {
@@ -259,14 +265,19 @@ button {
 
 footer {
 	background-color: $position_button_bacground_footer;
-	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: space-around;
 
 	h2 {
+		width: 90%;
 		font-family: $font-family_title;
 		color: $footer_txt;
 	}
 
 	ul {
+		width: 90%;
 		list-style: none;
 		padding-left: 0px;
 		color: $footer_txt;
@@ -294,59 +305,117 @@ footer {
 	padding-right: 5px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 	body {
 		background-color: white;
 	}
 
+	.img {
+		padding-top: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.imgtwo {
+		padding-top: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.imgthree {
+		padding-top: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.imgfour {
+		padding-top: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.card-content {
+		margin: 0px 100px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.card-title {
+		justify-content: center;
+		gap: 30px;
+	}
+
+	h3 {
+		width: 75%;
+	}
+
+	.card-txt {
+		width: 75%;
+	}
+
+	footer {
+		flex-direction: row-reverse;
+		justify-content: center;
+		flex-wrap: nowrap;
+		gap: 50px;
+		padding-bottom: 15px;
+		padding-top: 35px;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 0px;
+			gap: 10px;
+			width: 550px;
+		}
+
+		li {
+			padding: 0px 20px;
+			text-align: right;
+		}
+
+		h2 {
+			margin-bottom: 0px;
+			width: auto;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	body {
+		background-color: #f6f6f6;
+		display: flex;
+		justify-content: center;
+	}
+
 	.main-container {
-		width: 100%;
 		max-width: 1440px;
-		box-sizing: border-box;
-	}
-
-	header {
-		justify-content: flex-start;
-	}
-
-	nav {
-		width: 44%;
-	}
-
-	img {
-		width: auto;
+		background-color: white;
 	}
 
 	.img {
 		padding-top: 420px;
 		background-repeat: no-repeat;
-		background-size: 100% 45%;
-		background-position-y: -260px;
-		background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplashR.jpg);
+		background-size: 100% 460px;
+		background-position: center 0px;
 	}
 
 	.imgtwo {
-		background-image: url(Images/stil-u2Lp8tXIcjw-unsplashR.jpg);
 		padding-top: 420px;
 		background-repeat: no-repeat;
-		background-size: 100% 74%;
-		background-position-y: -770px;
+		background-size: 100% 460px;
+		background-position: center 0px;
 	}
 
 	.imgthree {
 		padding-top: 420px;
-		background-size: 100% 52%;
 		background-repeat: no-repeat;
-		background-position-y: -370px;
-		background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplashR.jpg);
+		background-size: 100% 460px;
+		background-position: center 0px;
 	}
 
 	.imgfour {
 		padding-top: 420px;
-		background-size: 100% 52%;
 		background-repeat: no-repeat;
-		background-position-y: -370px;
-		background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplashR.jpg);
+		background-size: 100% 460px;
+		background-position: center 0px;
 	}
 
 	.card {
@@ -354,11 +423,10 @@ footer {
 	}
 
 	.card-content {
-		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
-		flex-direction: column;
 		justify-content: center;
-		align-content: center;
+		margin: 0px 200px;
 	}
 
 	.card-title {
@@ -374,130 +442,29 @@ footer {
 		width: 75%;
 	}
 
-	.text {
-		width: 80%;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: flex-start;
-		align-items: flex-end;
-		gap: 20px;
-		padding-bottom: 15px;
-		padding-top: 35px;
-
-		h2 {
-			margin-bottom: 0px;
-		}
-	}
-
-	ul {
-		display: flex;
-		flex-direction: row;
-		margin-bottom: 0px;
-		gap: 10px;
-	}
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-	body {
-		background-color: white;
-	}
-
-	.main-container {
-		width: 100%;
-		max-width: 768px;
-		box-sizing: border-box;
-	}
-
-	header {
-		justify-content: flex-start;
-	}
-
-	nav {
-		width: 44%;
-	}
-
-	img {
-		width: auto;
-	}
-
-	.img {
-		padding-top: 420px;
-		background-repeat: no-repeat;
-		background-size: 100% 45%;
-		background-position-y: -260px;
-		background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplashR.jpg);
-	}
-
-	.imgtwo {
-		background-image: url(Images/stil-u2Lp8tXIcjw-unsplashR.jpg);
-		padding-top: 420px;
-		background-repeat: no-repeat;
-		background-size: 100% 74%;
-		background-position-y: -770px;
-	}
-
-	.imgthree {
-		padding-top: 420px;
-		background-size: 100% 52%;
-		background-repeat: no-repeat;
-		background-position-y: -370px;
-		background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplashR.jpg);
-	}
-
-	.imgfour {
-		padding-top: 420px;
-		background-size: 100% 52%;
-		background-repeat: no-repeat;
-		background-position-y: -370px;
-		background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplashR.jpg);
-	}
-
-	.card {
-		margin: 0px 100px;
-	}
-
-	.card-content {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
-	}
-
-	.card-title {
-		justify-content: center;
-		gap: 30px;
-	}
-
-	h3 {
-		width: 75%;
-	}
-
-	.card-txt {
+	.button {
 		width: 75%;
 	}
 
 	footer {
-		display: flex;
 		flex-direction: row-reverse;
-		justify-content: flex-start;
+		align-content: flex-end;
 		align-items: flex-end;
+		flex-wrap: nowrap;
 		gap: 20px;
-		padding-bottom: 15px;
-		padding-top: 35px;
+		padding: 30px 25px;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 0px;
+			gap: 10px;
+			width: auto;
+		}
 
 		h2 {
 			margin-bottom: 0px;
+			width: auto;
 		}
-	}
-
-	ul {
-		display: flex;
-		flex-direction: row;
-		margin-bottom: 0px;
-		gap: 10px;
 	}
 }
