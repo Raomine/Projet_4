@@ -12,6 +12,8 @@ $store_icon: #9356DC;
 $footer_txt: white;
 
 @mixin card-img-p {
+	background-size: cover;
+	background-position: center;
 	display: flex;
 	justify-content: end;
 	height: 187.5px;
@@ -31,6 +33,8 @@ $footer_txt: white;
 }
 
 @mixin card-img {
+	background-size: cover;
+	background-position: center;
 	display: flex;
 	justify-content: end;
 	height: 187.5px;
@@ -260,32 +264,21 @@ li {
 
 .img {
 	background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-	background-size: 120% 130%;
-	background-position-x: -50px;
 	@include card-img-p;
 }
 
 .imgtwo {
 	background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
-	background-size: 130% 200%;
-	background-position-y: -100px;
-	background-position-x: -50px;
 	@include card-img-p;
 }
 
 .imgthree {
 	background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-	background-size: 130% 150%;
-	background-position-y: -75px;
-	background-position-x: -50px;
 	@include card-img;
 }
 
 .imgfour {
 	background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-	background-size: 130% 150%;
-	background-position-y: -75px;
-	background-position-x: -50px;
 	@include card-img;
 }
 

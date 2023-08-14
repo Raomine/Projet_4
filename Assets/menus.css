@@ -12,32 +12,60 @@ body {
   box-sizing: border-box;
 }
 
-.img {
+main {
   padding-top: 220px;
+}
+
+.img {
+  height: 320px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
   background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-size: 100% 500px;
-  background-position: center -150px;
 }
 
 .imgtwo {
   background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
-  padding-top: 220px;
-  background-size: 100% 500px;
-  background-position: center -150px;
+  height: 320px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
 .imgthree {
   background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  padding-top: 220px;
-  background-size: 100% 500px;
-  background-position: center -150px;
+  height: 320px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
 .imgfour {
   background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  padding-top: 220px;
-  background-size: 100% 500px;
-  background-position: center -150px;
+  height: 320px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -58,7 +86,7 @@ header img {
   margin: auto;
 }
 
-.card-content {
+.card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -73,11 +101,12 @@ header img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 10px;
+  margin: 20px 0px;
 }
 
 .card-title h2 {
   font-family: "Shrikhand";
+  font-size: 28px;
 }
 
 .heart .fa-solid {
@@ -105,12 +134,23 @@ header img {
   opacity: 1;
 }
 
-h3 {
-  font-weight: 300;
-  font-size: 16px;
+.card-content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-h3::after {
+.card-content h3 {
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+
+.card-content h3::after {
   content: "";
   display: block;
   width: 40px;
@@ -119,58 +159,58 @@ h3::after {
 }
 
 .card-txt {
-  width: 90%;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  height: 70px;
+  padding: 0 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
-input[value="select"] {
-  display: block;
-  opacity: 0;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.fa-circle-check {
+input[type=checkbox] {
   display: none;
-  padding: 15px;
-  background-color: #99e2d0;
-  font-size: 40px;
+}
+
+.card-content .card-txt::after {
+  content: "\f058";
+  font-family: fontAwesome;
+  font-size: 20px;
   color: white;
   position: absolute;
-  top: 0;
   right: 0;
-  bottom: 0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  top: 0;
+  height: inherit;
+  width: 60px;
+  margin-right: -60px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  transition: margin-right 0.3s cubic-bezier(.33, -0.03, 1, .35);
 }
 
-input:checked+.fa-circle-check {
-  display: block;
+input[type=checkbox]:checked+.card-txt::after {
+  margin-right: 0px;
 }
 
 .card-txtone {
   transform: translateY(9999px);
-  animation: apparition 1s 1s forwards;
+  animation: apparition 1s 1s cubic-bezier(0, 1.11, 1, 1) forwards;
 }
 
 .card-txttwo {
   transform: translateY(9999px);
-  animation: apparition 1s 2s forwards;
+  animation: apparition 1s 2s cubic-bezier(0, 1.11, 1, 1) forwards;
 }
 
 .card-txtthree {
   transform: translateY(9999px);
-  animation: apparition 1s 3s forwards;
+  animation: apparition 1s 3s cubic-bezier(0, 1.11, 1, 1) forwards;
 }
 
 @keyframes apparition {
@@ -183,35 +223,43 @@ input:checked+.fa-circle-check {
   }
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  justify-content: space-around;
-}
-
-.card-txt p {
-  margin: 0px;
-}
-
 .pone {
   font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 12px;
+  transition: all 0.5s cubic-bezier(.27, .13, .5, 1);
 }
 
-.card-price {
+input[type=checkbox]:checked+.card-txt .pone {
+  padding-right: 60px;
+}
+
+.description {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 13.5px;
 }
 
 .ptwo {
   font-size: 15px;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .price {
   font-size: 15px;
   font-weight: 700;
-  color: #353535;
+  padding-left: 15px;
+  transition: all 0.5s cubic-bezier(.27, .13, .5, 1);
+}
+
+input[type=checkbox]:checked+.card-txt .price {
+  padding-right: 60px;
 }
 
 .button {
@@ -282,27 +330,27 @@ footer li a {
     background-color: white;
   }
 
-  .img {
+  main {
     padding-top: 320px;
-    background-repeat: no-repeat;
+  }
+
+  .img {
+    height: 420px;
   }
 
   .imgtwo {
-    padding-top: 320px;
-    background-repeat: no-repeat;
+    height: 420px;
   }
 
   .imgthree {
-    padding-top: 320px;
-    background-repeat: no-repeat;
+    height: 420px;
   }
 
   .imgfour {
-    padding-top: 320px;
-    background-repeat: no-repeat;
+    height: 420px;
   }
 
-  .card-content {
+  .card {
     margin: 0px 100px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -314,7 +362,11 @@ footer li a {
     gap: 30px;
   }
 
-  h3 {
+  .card-content {
+    align-content: center;
+  }
+
+  .card-content h3 {
     width: 75%;
   }
 
@@ -352,45 +404,32 @@ footer li a {
 
 @media (min-width: 1024px) {
   body {
-    background-color: #f6f6f6;
+    background-color: white;
     display: flex;
     justify-content: center;
   }
 
-  .main-container {
-    max-width: 1440px;
-    background-color: white;
+  main {
+    padding-top: 420px;
   }
 
   .img {
-    padding-top: 420px;
-    background-repeat: no-repeat;
-    background-size: 100% 460px;
-    background-position: center 0px;
+    height: 520px;
   }
 
   .imgtwo {
-    padding-top: 420px;
-    background-repeat: no-repeat;
-    background-size: 100% 460px;
-    background-position: center 0px;
+    height: 520px;
   }
 
   .imgthree {
-    padding-top: 420px;
-    background-repeat: no-repeat;
-    background-size: 100% 460px;
-    background-position: center 0px;
+    height: 520px;
   }
 
   .imgfour {
-    padding-top: 420px;
-    background-repeat: no-repeat;
-    background-size: 100% 460px;
-    background-position: center 0px;
+    height: 520px;
   }
 
-  .card-content {
+  .card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -402,15 +441,15 @@ footer li a {
     gap: 30px;
   }
 
-  h3 {
+  .card-content {
+    align-content: center;
+  }
+
+  .card-content h3 {
     width: 75%;
   }
 
   .card-txt {
-    width: 75%;
-  }
-
-  .button {
     width: 75%;
   }
 
