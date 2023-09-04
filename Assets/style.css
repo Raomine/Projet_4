@@ -1,3 +1,22 @@
+@keyframes scroll {
+  0%, 100% {
+    overflow: hidden;
+  }
+}
+@keyframes loader {
+  0%, 100% {
+    z-index: 1;
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -7,22 +26,14 @@ body {
   display: flex;
   justify-content: center;
   margin: 0px;
-  animation: scroll 2.5s;
-}
-
-@keyframes scroll {
-
-  0%,
-  100% {
-    overflow: hidden;
-  }
-
+  animation: scroll 3s;
 }
 
 .loader {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 2291px;
   position: absolute;
   background-color: #f6f6f6;
   z-index: -1;
@@ -30,35 +41,17 @@ body {
   animation: loader 3s;
 }
 
-@keyframes loader {
-
-  0%,
-  100% {
-    z-index: 1;
-    opacity: 1;
-  }
-}
-
 .anim-loader {
-  margin: 50% auto;
+  position: fixed;
+  top: 37%;
   width: 200px;
   height: 200px;
-  border-top: 25px solid #9356dc;
-  border-right: 25px ridge #99e2d0;
-  border-bottom: 25px solid #9356dc;
-  border-left: 25px ridge #99e2d0;
+  border-top: 25px solid #9356DC;
+  border-right: 25px ridge #99E2D0;
+  border-bottom: 25px solid #9356DC;
+  border-left: 25px ridge #99E2D0;
   border-radius: 50%;
   animation: rotation 0.9s linear 3;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .main-container {
@@ -75,12 +68,11 @@ header .logo {
   box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 2px;
 }
-
 header p {
   margin: 0px;
   padding: 17px 0px;
   text-align: center;
-  background-color: #eaeaea;
+  background-color: #EAEAEA;
   color: #353535;
 }
 
@@ -95,21 +87,17 @@ header p {
   align-items: center;
   padding-bottom: 50px;
 }
-
 .button h2 {
   width: 80%;
   text-align: center;
   margin-bottom: 10px;
 }
-
 .button p {
   width: 90%;
   text-align: center;
   margin-top: 0px;
   color: #353535;
-  font-weight: 300;
 }
-
 .button a {
   text-decoration: none;
   color: white;
@@ -117,12 +105,11 @@ header p {
   padding: 15px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: opacity 400ms, box-shadow 400ms;
 }
-
 .button a:hover {
   opacity: 0.8;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
@@ -136,7 +123,6 @@ header p {
   flex-wrap: wrap;
   padding: 50px 20px 50px 0px;
 }
-
 .fonctionnement li {
   border-radius: 20px;
   background: #f6f6f6;
@@ -144,11 +130,9 @@ header p {
   margin-bottom: 25px;
   padding: 25px 20px;
 }
-
 .fonctionnement i {
   padding-right: 20px;
 }
-
 .fonctionnement h2 {
   width: 90%;
   padding-left: 15px;
@@ -161,17 +145,17 @@ ol {
 }
 
 .fa-solid {
-  color: #7e7e7e;
+  color: #7E7E7E;
 }
 
 .fa-store {
-  color: #9356dc;
+  color: #9356DC;
 }
 
 li span {
   position: relative;
   right: 35px;
-  background-color: #9356dc;
+  background-color: #9356DC;
   border-radius: 24px;
   text-align: center;
   color: white;
@@ -185,7 +169,6 @@ li span {
   flex-wrap: wrap;
   padding: 50px 0px;
 }
-
 .restaurants h2 {
   width: 90%;
 }
@@ -202,10 +185,35 @@ li span {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
-
 .card a {
   color: black;
   text-decoration: none;
+}
+.card .fa-solid {
+  position: relative;
+  left: 90%;
+  bottom: 150%;
+  font-size: 22px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.card .fa-regular {
+  position: relative;
+  left: 90%;
+  bottom: 250%;
+  font-size: 22px;
+  color: #353535;
+}
+.card input {
+  display: none;
+}
+.card input:checked + label .fa-solid {
+  opacity: 1;
 }
 
 .img {
@@ -213,20 +221,20 @@ li span {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   height: 187.5px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
 .img p {
   margin-right: 10px;
   border: 1px solid;
+  height: -moz-min-content;
   height: min-content;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #008766;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 6px 9px;
 }
 
@@ -240,15 +248,15 @@ li span {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
 .imgtwo p {
   margin-right: 10px;
   border: 1px solid;
+  height: -moz-min-content;
   height: min-content;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #008766;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 6px 9px;
 }
 
@@ -281,46 +289,14 @@ li span {
 .txt {
   width: 80%;
 }
-
 .txt h3 {
   font-size: 18px;
   margin: 5px;
   max-height: 35px;
 }
-
 .txt p {
   font-weight: 300;
   margin: 5px;
-}
-
-.card .fa-solid {
-  position: relative;
-  left: 90%;
-  bottom: 150%;
-  font-size: 22px;
-  background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 0.3s;
-}
-
-.card .fa-regular {
-  position: relative;
-  left: 90%;
-  bottom: 250%;
-  font-size: 22px;
-  color: #353535;
-}
-
-.card input {
-  display: none;
-}
-
-.card input:checked+label .fa-solid {
-  opacity: 1;
 }
 
 footer {
@@ -330,28 +306,23 @@ footer {
   flex-wrap: wrap;
   align-content: space-around;
 }
-
 footer h2 {
   font-family: "Shrikhand";
   color: white;
   width: 90%;
 }
-
 footer ul {
   list-style: none;
   padding-left: 0px;
   color: white;
   width: 90%;
 }
-
 footer .fa-solid {
   color: white;
 }
-
 footer li {
   padding-bottom: 5px;
 }
-
 footer li a {
   text-decoration: none;
   color: white;
@@ -366,32 +337,33 @@ footer li a {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+  .loader {
+    height: 2368px;
+  }
   .anim-loader {
     width: 300px;
     height: 300px;
-    margin: 30% auto;
+    top: 31%;
   }
-
   .button h2 {
     width: 100%;
     font-size: 40px;
     margin-bottom: 30px;
   }
-
   .button p {
     width: 100%;
     margin-bottom: 30px;
   }
-
   .fonctionnement {
     padding: 50px 0px;
   }
-
   .fonctionnement h2 {
     text-align: center;
   }
-
+  .fonctionnement li {
+    width: 480px;
+    padding: 25px 40px;
+  }
   ol {
     display: flex;
     flex-direction: column;
@@ -400,16 +372,9 @@ footer li a {
     list-style: none;
     gap: 25px;
   }
-
-  .fonctionnement li {
-    width: 480px;
-    padding: 25px 40px;
-  }
-
   .restaurants h2 {
     text-align: center;
   }
-
   .restaurants-cards {
     display: flex;
     flex-direction: row;
@@ -417,34 +382,10 @@ footer li a {
     flex-wrap: wrap;
     gap: 50px;
   }
-
   .card {
     width: 490px;
     margin-bottom: 0px;
   }
-
-  .img {
-    background-size: 600px;
-    background-position-y: -150px;
-    background-position-x: -50px;
-  }
-
-  .imgtwo {
-    background-size: 550px;
-    background-position-y: -300px;
-    background-position-x: -50px;
-  }
-
-  .imgthree {
-    background-size: 550px;
-    background-position-y: -150px;
-  }
-
-  .imgfour {
-    background-size: 550px;
-    background-position-y: -150px;
-  }
-
   footer {
     justify-content: center;
     flex-direction: row-reverse;
@@ -453,54 +394,49 @@ footer li a {
     padding-bottom: 15px;
     padding-top: 35px;
   }
-
   footer ul {
     flex-direction: row;
     margin-bottom: 0px;
     gap: 10px;
     width: 550px;
   }
-
   footer li {
     padding: 0px 20px;
     text-align: right;
   }
-
   footer h2 {
     margin-bottom: 0px;
     width: auto;
   }
-
 }
-
 @media (min-width: 1024px) {
-
+  .loader {
+    height: 1573px;
+  }
   .anim-loader {
     width: 300px;
     height: 300px;
-    margin: 15% auto;
+    top: 31%;
   }
-
   .button h2 {
     width: 100%;
     font-size: 40px;
     margin-bottom: 30px;
   }
-
   .button p {
     width: 100%;
     margin-bottom: 30px;
   }
-
   .fonctionnement {
     padding: 50px 0px 50px 0px;
   }
-
   .fonctionnement h2 {
     width: 80%;
     padding-left: 0px;
   }
-
+  .fonctionnement li {
+    width: 100%;
+  }
   ol {
     padding: 0px;
     width: 80%;
@@ -508,15 +444,9 @@ footer li a {
     flex-direction: row;
     gap: 35px;
   }
-
-  .fonctionnement li {
-    width: 100%;
-  }
-
   .restaurants h2 {
     width: 80%;
   }
-
   .restaurants-cards {
     display: flex;
     flex-direction: row;
@@ -525,44 +455,19 @@ footer li a {
     width: 80%;
     justify-content: flex-start;
   }
-
   .card {
     width: 45%;
     padding-bottom: 15px;
   }
-
-  .img {
-    background-size: 120% 400px;
-    background-position: center;
-  }
-
-  .imgtwo {
-    background-size: 120% 400px;
-    background-position: center -130px;
-  }
-
-  .imgthree {
-    background-size: 120% 400px;
-    background-position: center -160px;
-  }
-
-  .imgfour {
-    background-size: 120% 300px;
-    background-position: center -100px;
-  }
-
-  .content {
-    padding: 10px;
-  }
-
   .card .fa-solid {
     bottom: 200%;
   }
-
   .card .fa-regular {
     bottom: 300%;
   }
-
+  .content {
+    padding: 10px;
+  }
   footer {
     flex-direction: row-reverse;
     align-content: flex-end;
@@ -571,7 +476,6 @@ footer li a {
     gap: 20px;
     padding: 30px 25px;
   }
-
   footer ul {
     display: flex;
     flex-direction: row;
@@ -579,10 +483,8 @@ footer li a {
     gap: 10px;
     width: auto;
   }
-
   footer h2 {
     margin-bottom: 0px;
     width: auto;
   }
-
-}
+}/*# sourceMappingURL=style.css.map */
