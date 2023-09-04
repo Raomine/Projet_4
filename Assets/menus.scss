@@ -7,6 +7,18 @@ $select_border: #99E2D0;
 $nav_heart_footer-background: #353535;
 $background_txt: white;
 
+@mixin card-img {
+	height: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: -1;
+	background-size: cover;
+	background-position: center;
+}
+
 @keyframes apparition {
 	from {
 		transform: translateY(9999px);
@@ -36,55 +48,23 @@ main {
 }
 
 .img {
-	height: 320px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: -1;
-	background-size: cover;
-	background-position: center;
 	background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+	@include card-img;
 }
 
 .imgtwo {
 	background-image: url(Images/stil-u2Lp8tXIcjw-unsplash.jpg);
-	height: 320px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: -1;
-	background-size: cover;
-	background-position: center;
+	@include card-img;
 }
 
 .imgthree {
 	background-image: url(Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-	height: 320px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: -1;
-	background-size: cover;
-	background-position: center;
+	@include card-img;
 }
 
 .imgfour {
 	background-image: url(Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-	height: 320px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: -1;
-	background-size: cover;
-	background-position: center;
+	@include card-img;
 }
 
 header {

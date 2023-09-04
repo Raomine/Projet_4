@@ -25,6 +25,7 @@ main {
 }
 
 .img {
+  background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   height: 320px;
   position: absolute;
   top: 0px;
@@ -34,7 +35,6 @@ main {
   z-index: -1;
   background-size: cover;
   background-position: center;
-  background-image: url(Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 
 .imgtwo {
